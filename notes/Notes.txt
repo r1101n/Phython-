@@ -1,0 +1,56 @@
+Python
+1. Pip is external manager who import external data
+2. Read evaluate learn
+
+Strings are Immutable in Python
+ 
+ a="!!!!!!Harry!!!"
+ print(len(a))   -> 14
+ print(a.upper()) ->!!!!!!HARRY!!!
+ print(a.upper()) ->!!!!!!harry!!!
+ print(a.rstrip()) ->!!!!!!HARRY
+ print(a.replace("Harry" "John"))  -> !!!!!!John!!!
+ a.capitalized
+ a.count("harry")
+ a.endswith("!!!")   ->TRUE/FALSE
+ a.find("is")
+ a.isalnum()
+ a.index("is")
+ 
+ 
+ If
+ elIf
+ else
+ 
+import time
+timestamp= time.strftime('%H:%M:%S')
+print(timestamp)
+
+
+match case statement
+no break statement 
+
+
+code 
+x = int(input("Enter the value of x:"))
+match x:
+case 0:
+  print("x is zer0")
+
+while and else can be used
+
+example of do while in Python
+do while 
+i=0
+while True:
+  print(i)
+  i= i+1
+  if i%100 == 0 :
+     break
+
+
+
+for i in range(12):
+  if i == 10:
+    continue/break
+  print("5 X", i+1, "=", 5 * (i+1))
