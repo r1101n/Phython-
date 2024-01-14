@@ -1,7 +1,6 @@
 1- write a program which takes single input from user contaning first name,last name and age as comma separated value and display then in 3 lines in given format below.
 
 example user input : Ankit,Bansal,35
-
 output:
 First name is Ankit
 last name is Bansal
