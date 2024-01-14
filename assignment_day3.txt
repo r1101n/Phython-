@@ -6,8 +6,6 @@ numbers = [1, 2, 3, 4, 5]
 
 # Calculate the mean of the numbers
 total = sum(numbers)
-
-
 mean = total / len(numbers)
 
 # Display the mean
@@ -205,11 +203,6 @@ for university in universities:
 
 9-  write a program that reverses a given string. For example, if the input is "Hello" from user, the output should be "olleH"
 
-
-
-
-
-
 solution 1 :
 string = input("Enter a string: ")  # Get the string input from the user
 
@@ -227,8 +220,6 @@ string = input("Enter a string: ")  # Get the string input from the user
 reversed_string = string[::-1]  # Use slicing to reverse the string
 
 print("Reversed string:", reversed_string)
-
-
 
 
 10- write a program that finds the largest number in a list(unsorted) of integers without using sort/sorted method.
