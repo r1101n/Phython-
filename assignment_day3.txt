@@ -3,7 +3,6 @@
 solution:
 # Example list of numbers
 numbers = [1, 2, 3, 4, 5]
-
 # Calculate the mean of the numbers
 total = sum(numbers)
 mean = total / len(numbers)
