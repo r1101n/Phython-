@@ -1,5 +1,4 @@
 1- given a list of numbers, write a program to find the mean of the numbers in list
-
 solution:
 # Example list of numbers
 numbers = [1, 2, 3, 4, 5]
@@ -12,11 +11,9 @@ print("Mean:", mean)
 
 
 2- given a list of numbers unsorted, write a program to find the median of the numbers in list
-
 solution :
 # Example list of numbers
 numbers = [5, 1, 3, 2, 4]
-
 # Sort the list in ascending order
 numbers.sort()
 
