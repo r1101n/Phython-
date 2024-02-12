@@ -2,6 +2,7 @@
 
 example user input : Ankit,Bansal,35
 output:
+
 First name is Ankit
 last name is Bansal
 Ankit is 35 years old 
