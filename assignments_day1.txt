@@ -5,7 +5,9 @@ https://www.w3schools.com/python/python_ref_string.asp
 
 1- write a program which takes 2 inputs from the user : weight(kg) and height(meter) and prints the BMI in the output.
 
-BMI = weight / (square of height)
+BMI = weight / (square of height) 
+ 
+
 Solution 
 weight = float(input("Enter your weight in kg: "))
 height = float(input("Enter your height in meters: "))
