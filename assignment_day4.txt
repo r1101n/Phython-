@@ -1,5 +1,5 @@
-1- create a txt file and put 4-5 lines. Now create another file from the 
-previous file and at the end of each line put the count of words.
+1- create a txt file and put 4-5 lines. Now create another file from the previous file and at the end of each line put the count of words.
+
 example :
 file 1:
 this is namaste sql course
@@ -69,29 +69,22 @@ capitals_dict = {
     'Georgia': 'Atlanta'
 }
 
-state = input("Pick a state from the dictionary: ")
-state = state.capitalize()  # Convert the input to capitalize for case insensitivity
+state = input("Enter state")
+if state in capitals_dict:
+   capital=input("enter capital")
 
-while True:
-    if state in capitals_dict:
-        capital = capitals_dict[state]
-        guess = input("Enter the capital of {}: ".format(state))
-        guess = guess.capitalize()  # Convert the guess to capitalize for case insensitivity
-
-        if guess == capital:
-            print("Correct!")
-            break
-        elif guess.lower() == 'exit':
-            print("The correct answer was: {}".format(capital))
-            print("Goodbye!")
-            break
-        else:
-            print("Incorrect. Try again or type 'exit' to quit.")
-    else:
-        print("Invalid state. Please pick a state from the dictionary.")
-    
-    state = input("Pick a state from the dictionary: ")
-    state = state.capitalize()
+   while True:
+     if capital == capitals_dict[state]:
+        print("wow")
+        break
+     elif capital == "exit":
+        print("thanks for playing")
+        break
+     else:
+        print("sorry try again or exit")
+        capital=input("enter capital")
+else:
+    print("state not there")
 
 
 
@@ -110,16 +103,13 @@ capitals_dict = {
     'Georgia': 'Atlanta'
 }
 
-state = input("Enter a state: ")
-capital = capitals_dict.get(state.capitalize())
-
-## note here we are using capitals_dict.get function instead of capitals_dict['state']. the advantage of using this method it wont throw error if key is not present in the dictonary. it will only return None.
-
-if capital:
-    print("The capital of {} is {}.".format(state, capital))
+state = input("Enter state")
+state= state.capitalize()
+if state in capitals_dict:
+  capital = capitals_dict[state]
+  print(f"state is {state}so capital is {capital}")
 else:
-    print("Sorry, information not available.")
-
+    print("not there in state write correct state name")
 
 4- Let say You have one 100 cats.
 One day, you decide to arrange all your cats in a giant circle. Initially,none of your cats has a hat on.

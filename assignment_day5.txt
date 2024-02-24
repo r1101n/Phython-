@@ -1,19 +1,23 @@
 1- for the day 4 and day 3 assignments convert all the programs to functions
+
 2- write a Python function which takes a positive number as input and return the factorial of the number.
+
 def factorial(n):
+    n= int(n)
     if n < 0:
-        return "Error: Input must be a positive number"
-    elif n == 0 or n == 1:
+        return "Error :Input should be positive"
+    elif n==0 or n==1:
         return 1
     else:
-        result = 1
-        for i in range(2, n+1):
+        result= 1
+        for i in range(2,n+1):
             result *= i
         return result
-# Example usage
-number = int(input("Enter a positive number: "))
-factorial_result = factorial(number)
-print("The factorial of {} is: {}".format(number, factorial_result))
+
+#work it
+num = input("enter number")
+result_fact = factorial(num)
+print(result_fact)
 
 
 3- Write a Python function that accepts a string and counts the number of upper and lower case letters.
@@ -22,59 +26,57 @@ Expected Output :
 No. of Upper case characters : 3
 No. of Lower case Characters : 12
 
-def count_upper_lower(string):
-    upper_count = 0
-    lower_count = 0
+def letter_count(str):
+      upper=0
+      lower=0
+      for char in str:
+          if char.isupper():
+              upper +=1
+          elif char.islower():
+              lower +=1
+      return upper,lower
 
-    for char in string:
-        if char.isupper():
-            upper_count += 1
-        elif char.islower():
-            lower_count += 1
 
-    return upper_count, lower_count
-
-# Example usage
-sample_string = 'The quick Brow Fox'
-upper, lower = count_upper_lower(sample_string)
-print("No. of Upper case characters:", upper)
-print("No. of Lower case characters:", lower)
+#example
+String= "The quick Brow Fox"
+result = letter_count(String)
+print(result)
 
 
 4- Write a Python function that takes a list and returns a new list with distinct elements from the first list.
 Sample List : [1,2,3,3,3,3,4,5]
 Unique List : [1, 2, 3, 4, 5]
 
-def get_unique_list(input_list):
-    unique_list = []
-
-    for item in input_list:
-        if item not in unique_list:
-            unique_list.append(item)
-
+def distinctlist(list):
+    unique_list =[]
+    for i in list:
+        if i  not in unique_list:
+            unique_list.append(i)
+        else:
+            continue
     return unique_list
-
-# Example usage
+#example
 sample_list = [1, 2, 3, 3, 3, 3, 4, 5]
-result = get_unique_list(sample_list)
-print("Unique List:", result)
+result = distinctlist(sample_list)
+print(result)
 
 
 5- Write a Python function that checks whether a passed string is a palindrome or not.
-Note: A palindrome is a word, phrase, or sequence that reads the same backward as forward, e.g., madam.
+Note: A palindrome is a word, phrase,
+or sequence that reads the same backward as forward, e.g., madam.
 
-def is_palindrome(string):
-    string = string.lower()  # Convert the string to lowercase for case insensitivity
-    reversed_string = string[::-1]  # Reverse the string
-
-    return string == reversed_string
-
-# Example usage
-input_string = input("Enter a string: ")
-if is_palindrome(input_string):
-    print("The string is a palindrome.")
-else:
-    print("The string is not a palindrome.")
+def palindrome(str):
+    reverse_string=""
+    for i in str:
+        reverse_string = i + reverse_string
+    if reverse_string == str:
+            return "palindrome"
+    else:
+            return "it is not a palindrome"
+#example
+takeInput= input("Enter string")
+result = palindrome(takeInput)
+print(result)
 
 
 6- Write a Python program that accepts a hyphen-separated sequence of words as input and prints the words in a hyphen-separated sequence after sorting them alphabetically.
@@ -106,21 +108,29 @@ b-> 1
 c-> 2
 d -> 1
 
-def count_characters(string):
-    character_count = {}
+def count_characters(s):
+    # Create an empty dictionary to store character counts
+    char_count = {}
 
-    for char in string:
-        if char in character_count:
-            character_count[char] += 1
+    # Iterate through each character in the string
+    for char in s:
+        # Check if the character is already in the dictionary
+        if char in char_count:
+            # If it is, increment its count by 1
+            char_count[char] += 1
         else:
-            character_count[char] = 1
+            # If it's not, add it to the dictionary with count 1
+            char_count[char] = 1
 
-    for char, count in character_count.items():
-        print(char, "->", count)
+    # Print the count of each character
+    for char, count in char_count.items():
+        print(f"Character '{char}' occurs {count} times")
+
 
 # Example usage
-input_string = input("Enter a string: ")
-count_characters(input_string)
+sample_string = "aabccda"
+count_characters(sample_string)
+
 
 
 8- write a function called is_prime that takes an integer as an argument and returns True if it is a prime number, and False otherwise.
@@ -145,23 +155,26 @@ else:
 
 9- write a function called generate_fibonacci that takes an integer n as input and returns a list of the first n Fibonacci numbers.
 
-def generate_fibonacci(n):
+def fibo(num):
+    # Initialize the first two Fibonacci numbers
+    first, second = 0, 1
+    # List to store Fibonacci sequence
     fibonacci_sequence = []
 
-    if n >= 1:
-        fibonacci_sequence.append(0)
-    if n >= 2:
-        fibonacci_sequence.append(1)
-
-    for i in range(2, n):
-        fibonacci_sequence.append(fibonacci_sequence[i-1] + fibonacci_sequence[i-2])
+    # Iterate 'num' times to generate Fibonacci numbers
+    for _ in range(num):
+        # Append the current Fibonacci number to the sequence
+        fibonacci_sequence.append(first)
+        # Calculate the next Fibonacci number
+        first, second = second, first + second
 
     return fibonacci_sequence
 
+
 # Example usage
-input_n = int(input("Enter a number: "))
-fibonacci_numbers = generate_fibonacci(input_n)
-print("Fibonacci sequence:", fibonacci_numbers)
+a = int(input("Enter the number of Fibonacci numbers to generate: "))
+result = fibo(a)
+print(result)
 
 
 10- Write a function called capitalize_odd_letters that takes a string as input and returns the same string with the odd-indexed letters capitalized.
