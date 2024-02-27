@@ -1,7 +1,6 @@
 1- for the day 4 and day 3 assignments convert all the programs to functions
 
 2- write a Python function which takes a positive number as input and return the factorial of the number.
-
 def factorial(n):
     n= int(n)
     if n < 0:
